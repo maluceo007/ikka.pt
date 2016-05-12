@@ -1,0 +1,48 @@
+
+html, body, .container-fluid{
+	height: 100%;
+}
+body { 	
+    font-family: 'Electrolize', Arial, sans-serif;
+    font-weight: 400;
+    /*font-size: 15px;*/
+    color: #fff;
+	background: url("../images/background_main.png") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+body, div, ul{
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-size: 9vh;
+	or
+	font-size: 9vw;
+	text-shadow: 0px 2px 3px #555;
+}
+.img-logo{
+	display: table-cell;
+	vertical-align: middle;
+	
+}
+object {
+	width: 100%;
+	height: 50%;
+	
+}
+.msg{
+	background-color: white;
+	color: black;
+	margin: 20px auto 10px auto;
+}
+.msg h2{
+	font-size: 3vh;
+	or
+	font-size: 3vw;
+	text-shadow: 0px 2px 3px #555;
+	margin: 10px;
+}
+	

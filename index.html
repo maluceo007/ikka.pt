@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8">
+	<title>ikc2017</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"></script>
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+	<!-- Custom css files -->
+	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+	<link href="css/mb-comingsoon-iceberg.css" rel="stylesheet" />
+
+	<!--     <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css">    -->
+</head>
+<body>
+	<div class="container-fluid">
+
+		<div class="row text-center"> 
+			<h1>International Karate Championships 2017 </h1>
+		</div>
+
+		<div class="row img-logo"></div>
+		<object type="image/svg+xml" data="images/logo_IKC.svg" > </object>
+
+		<div class="row text-center msg">
+			<h2>TOURNAMENT STARTS IN</h2>
+		</div>
+		
+		<div class="row centered text-center" id="myCounter"></div>
+			
+
+		
+	</div> <!-- /end container-fluid -->
+
+	<!-- Latest compiled and minified JavaScript -->	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="js/jquery.mb-comingsoon.min.js"></script>
+
+	 <script type="text/javascript">
+	 	$(document).ready(function(){
+        
+			// fade in msg background
+			$(".msg").hide();
+			$("#myCounter").hide();
+			$(".msg").delay(3000).fadeIn(2000);
+			$("#myCounter").delay(4000).fadeIn(1500);
+
+            var $section = $('section');
+            $(window).on("resize", function () {
+                var dif = Math.max($(window).height() - $section.height(), 0);
+                var padding = Math.floor(dif / 2) + 'px';
+                $section.css({ 'padding-top': padding, 'padding-bottom': padding });
+            }).trigger("resize");
+            $('#myCounter').mbComingsoon({ expiryDate: new Date("2017-05-06T09:00:00"), speed:100 }); //YYYY-MM-DDTHH:MM:SS
+            setTimeout(function () {
+                $(window).resize();
+            }, 200);
+
+        });
+
+    </script>
+</body>
+</html>
